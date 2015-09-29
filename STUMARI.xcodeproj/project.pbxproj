@@ -14,6 +14,8 @@
 		E2BC70291BB9C44500234269 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70281BB9C44500234269 /* Images.xcassets */; };
 		E2BC702C1BB9C44500234269 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BC702A1BB9C44500234269 /* LaunchScreen.xib */; };
 		E2BC70381BB9C44500234269 /* STUMARITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC70371BB9C44500234269 /* STUMARITests.swift */; };
+		E2E0857D1BBABA9E00B4AD59 /* RentalsPFQueryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0857C1BBABA9E00B4AD59 /* RentalsPFQueryTableViewController.swift */; };
+		E2E0857F1BBAD45200B4AD59 /* RequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0857E1BBAD45200B4AD59 /* RequestTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		E2BC70361BB9C44500234269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2BC70371BB9C44500234269 /* STUMARITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUMARITests.swift; sourceTree = "<group>"; };
 		E2BC70411BB9D50300234269 /* STUMARI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STUMARI-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2E0857C1BBABA9E00B4AD59 /* RentalsPFQueryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalsPFQueryTableViewController.swift; sourceTree = "<group>"; };
+		E2E0857E1BBAD45200B4AD59 /* RequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTableViewController.swift; sourceTree = "<group>"; };
 		F842FC2E2BBCC09796627EE0 /* Pods-STUMARI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUMARI.release.xcconfig"; path = "Pods/Target Support Files/Pods-STUMARI/Pods-STUMARI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,8 @@
 				E2BC702A1BB9C44500234269 /* LaunchScreen.xib */,
 				E2BC701F1BB9C44500234269 /* Supporting Files */,
 				E2BC70411BB9D50300234269 /* STUMARI-Bridging-Header.h */,
+				E2E0857C1BBABA9E00B4AD59 /* RentalsPFQueryTableViewController.swift */,
+				E2E0857E1BBAD45200B4AD59 /* RequestTableViewController.swift */,
 			);
 			path = STUMARI;
 			sourceTree = "<group>";
@@ -273,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E0857D1BBABA9E00B4AD59 /* RentalsPFQueryTableViewController.swift in Sources */,
 				E2BC70241BB9C44500234269 /* ViewController.swift in Sources */,
+				E2E0857F1BBAD45200B4AD59 /* RequestTableViewController.swift in Sources */,
 				E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
