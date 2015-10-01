@@ -35,7 +35,7 @@ class TableOfRentalsPFQueryTableViewController: PFQueryTableViewController {
             query.cachePolicy = .CacheThenNetwork
         }
         
-        query.orderByDescending("createdAt")
+        query.orderByDescending("updatedAt")
         
         return query
     }

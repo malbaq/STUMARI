@@ -19,11 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("RQGGrvNgwtcarntP1MYSq5NT90IY8S1vkDBZYdII", clientKey:"eXEAjyCnVmnRFIel3cvyXfeXbxeZfjzzQigHofwJ")
         
-        var testObj = PFObject(className: "tstino")
-        testObj.setObject(1, forKey: "int")
-       // testObj["fuck"]="off"
-        testObj.saveInBackground()
-        
         return true
     }
 

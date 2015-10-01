@@ -9,7 +9,11 @@
 import UIKit
 
 class RequestTableViewController: UITableViewController {
-
+    
+    var price:Int = 50
+    
+    @IBOutlet var priceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +31,7 @@ class RequestTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /* commented by MA
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -38,6 +43,7 @@ class RequestTableViewController: UITableViewController {
         // Return the number of rows in the section.
         return 0
     }
+    */
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -93,5 +99,17 @@ class RequestTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func searchButtonPressed(sender: AnyObject) {
+        
+        var request = Request(price: price)
+        println(request)
+        request.saveInBackground()
+    }
+    
+    @IBAction func priceSliderChanged(sender: UISlider) {
+        price = lroundf(sender.value)
+        priceLabel.text = "\(price)+"
+    }
 
 }

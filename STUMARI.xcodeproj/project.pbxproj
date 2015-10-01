@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		68A0522DC05096453C7BB7F1 /* libPods-STUMARI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08124CB0F79731FA2E526D00 /* libPods-STUMARI.a */; };
 		E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC70211BB9C44500234269 /* AppDelegate.swift */; };
-		E2BC70241BB9C44500234269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC70231BB9C44500234269 /* ViewController.swift */; };
 		E2BC70271BB9C44500234269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70251BB9C44500234269 /* Main.storyboard */; };
 		E2BC70291BB9C44500234269 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70281BB9C44500234269 /* Images.xcassets */; };
 		E2BC702C1BB9C44500234269 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BC702A1BB9C44500234269 /* LaunchScreen.xib */; };
@@ -17,6 +16,8 @@
 		E2E0857F1BBAD45200B4AD59 /* RequestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0857E1BBAD45200B4AD59 /* RequestTableViewController.swift */; };
 		E2E085811BBAE45C00B4AD59 /* TableOfRentalsPFQueryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E085801BBAE45C00B4AD59 /* TableOfRentalsPFQueryTableViewController.swift */; };
 		E2E085851BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E085841BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift */; };
+		E2E085871BBC1BF500B4AD59 /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2E085861BBC1BF500B4AD59 /* example.jpg */; };
+		E2E085891BBC58C200B4AD59 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E085881BBC58C200B4AD59 /* RequestModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 		E2BC701C1BB9C44500234269 /* STUMARI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STUMARI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC70201BB9C44500234269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2BC70211BB9C44500234269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2BC70231BB9C44500234269 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2BC70261BB9C44500234269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2BC70281BB9C44500234269 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E2BC702B1BB9C44500234269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		E2E0857E1BBAD45200B4AD59 /* RequestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTableViewController.swift; sourceTree = "<group>"; };
 		E2E085801BBAE45C00B4AD59 /* TableOfRentalsPFQueryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfRentalsPFQueryTableViewController.swift; sourceTree = "<group>"; };
 		E2E085841BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfRentalsPFTableViewCell.swift; sourceTree = "<group>"; };
+		E2E085861BBC1BF500B4AD59 /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
+		E2E085881BBC58C200B4AD59 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		F842FC2E2BBCC09796627EE0 /* Pods-STUMARI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUMARI.release.xcconfig"; path = "Pods/Target Support Files/Pods-STUMARI/Pods-STUMARI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,12 +114,13 @@
 				E2E0857E1BBAD45200B4AD59 /* RequestTableViewController.swift */,
 				E2E085801BBAE45C00B4AD59 /* TableOfRentalsPFQueryTableViewController.swift */,
 				E2E085841BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift */,
-				E2BC70231BB9C44500234269 /* ViewController.swift */,
 				E2BC70251BB9C44500234269 /* Main.storyboard */,
 				E2BC70281BB9C44500234269 /* Images.xcassets */,
 				E2BC702A1BB9C44500234269 /* LaunchScreen.xib */,
 				E2BC701F1BB9C44500234269 /* Supporting Files */,
 				E2BC70411BB9D50300234269 /* STUMARI-Bridging-Header.h */,
+				E2E085861BBC1BF500B4AD59 /* example.jpg */,
+				E2E085881BBC58C200B4AD59 /* RequestModel.swift */,
 			);
 			path = STUMARI;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				E2BC70271BB9C44500234269 /* Main.storyboard in Resources */,
 				E2BC702C1BB9C44500234269 /* LaunchScreen.xib in Resources */,
+				E2E085871BBC1BF500B4AD59 /* example.jpg in Resources */,
 				E2BC70291BB9C44500234269 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2BC70241BB9C44500234269 /* ViewController.swift in Sources */,
 				E2E085851BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift in Sources */,
 				E2E0857F1BBAD45200B4AD59 /* RequestTableViewController.swift in Sources */,
 				E2E085811BBAE45C00B4AD59 /* TableOfRentalsPFQueryTableViewController.swift in Sources */,
 				E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */,
+				E2E085891BBC58C200B4AD59 /* RequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
