@@ -9,8 +9,10 @@
 import UIKit
 
 class RequestTableViewController: UITableViewController {
-    
+    // Set up initial price according initial value of the slider
     var price:Int = 50
+    
+    var request: Request?
     
     @IBOutlet var priceLabel: UILabel!
     
@@ -90,26 +92,37 @@ class RequestTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if (segue.identifier == "showTableOfRentals") {
+            
+            let nav = segue.destinationViewController as! UINavigationController
+            let tableOfRentalsPFQueryTableViewController: TableOfRentalsPFQueryTableViewController = nav.topViewController as! TableOfRentalsPFQueryTableViewController
+            // look how to set up the request property and init all the table
+             tableOfRentalsPFQueryTableViewController.request = self.request
+            
+        }
     }
-    */
+    
     
     @IBAction func searchButtonPressed(sender: AnyObject) {
         
-        var request = Request(price: price)
+        request = Request(price: price)
         println(request)
-        request.saveInBackground()
+        request!.saveInBackground()
+        //then peform segue to table of rentals
     }
     
     @IBAction func priceSliderChanged(sender: UISlider) {
         price = lroundf(sender.value)
-        priceLabel.text = "\(price)+"
+        priceLabel.text = "$\(price)+"
     }
 
 }

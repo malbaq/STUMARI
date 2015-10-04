@@ -10,6 +10,8 @@ import UIKit
 
 class TableOfRentalsPFQueryTableViewController: PFQueryTableViewController {
     
+    var request: Request!
+    
     override init(style: UITableViewStyle, className: String?) {
         super.init(style: style, className: className)
         parseClassName = "Rental"
@@ -27,7 +29,8 @@ class TableOfRentalsPFQueryTableViewController: PFQueryTableViewController {
     }
     
     override func queryForTable() -> PFQuery {
-        let query = PFQuery(className: self.parseClassName!)
+        let query:PFQuery = PFQuery(className: self.parseClassName!)
+    
         
         // If no objects are loaded in memory, we look to the cache first to fill the table
         // and then subsequently do a query against the network.
@@ -36,7 +39,7 @@ class TableOfRentalsPFQueryTableViewController: PFQueryTableViewController {
         }
         
         query.orderByDescending("updatedAt")
-        
+        query.whereKey("price", greaterThanOrEqualTo: request.price)
         return query
     }
     
@@ -68,7 +71,6 @@ class TableOfRentalsPFQueryTableViewController: PFQueryTableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
