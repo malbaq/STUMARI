@@ -10,6 +10,7 @@ import UIKit
 
 class TableOfRentalsPFTableViewCell: PFTableViewCell {
 
+    @IBOutlet var priceLabel: UILabel!
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,5 +18,7 @@ class TableOfRentalsPFTableViewCell: PFTableViewCell {
         // Drawing code
     }
     */
+    
+    
 
 }

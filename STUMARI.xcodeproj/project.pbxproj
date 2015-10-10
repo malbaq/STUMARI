@@ -18,6 +18,7 @@
 		E2E085851BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E085841BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift */; };
 		E2E085871BBC1BF500B4AD59 /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2E085861BBC1BF500B4AD59 /* example.jpg */; };
 		E2E085891BBC58C200B4AD59 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E085881BBC58C200B4AD59 /* RequestModel.swift */; };
+		E2E0858B1BC26AFE00B4AD59 /* RentalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0858A1BC26AFE00B4AD59 /* RentalModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E2E085841BBAFAA800B4AD59 /* TableOfRentalsPFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfRentalsPFTableViewCell.swift; sourceTree = "<group>"; };
 		E2E085861BBC1BF500B4AD59 /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		E2E085881BBC58C200B4AD59 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		E2E0858A1BC26AFE00B4AD59 /* RentalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalModel.swift; sourceTree = "<group>"; };
 		F842FC2E2BBCC09796627EE0 /* Pods-STUMARI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUMARI.release.xcconfig"; path = "Pods/Target Support Files/Pods-STUMARI/Pods-STUMARI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				E2BC701F1BB9C44500234269 /* Supporting Files */,
 				E2BC70411BB9D50300234269 /* STUMARI-Bridging-Header.h */,
 				E2E085861BBC1BF500B4AD59 /* example.jpg */,
+				E2E0858A1BC26AFE00B4AD59 /* RentalModel.swift */,
 				E2E085881BBC58C200B4AD59 /* RequestModel.swift */,
 			);
 			path = STUMARI;
@@ -291,6 +294,7 @@
 				E2E085811BBAE45C00B4AD59 /* TableOfRentalsPFQueryTableViewController.swift in Sources */,
 				E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */,
 				E2E085891BBC58C200B4AD59 /* RequestModel.swift in Sources */,
+				E2E0858B1BC26AFE00B4AD59 /* RentalModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

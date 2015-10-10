@@ -118,6 +118,7 @@ class RequestTableViewController: UITableViewController {
         println(request)
         request!.saveInBackground()
         //then peform segue to table of rentals
+        self.performSegueWithIdentifier("showTableOfRentals", sender: self)
     }
     
     @IBAction func priceSliderChanged(sender: UISlider) {
