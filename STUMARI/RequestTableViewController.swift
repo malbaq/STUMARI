@@ -101,29 +101,32 @@ class RequestTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if (segue.identifier == "showTableOfRentals") {
+        
+        if (segue.identifier == "showRentals") {
             
             let nav = segue.destinationViewController as! UINavigationController
-            let tableOfRentalsPFQueryTableViewController: TableOfRentalsPFQueryTableViewController = nav.topViewController as! TableOfRentalsPFQueryTableViewController
+            let tableOfRentalsViewController: TableOfRentalsViewController = nav.topViewController as! TableOfRentalsViewController
             // look how to set up the request property and init all the table
-             tableOfRentalsPFQueryTableViewController.request = self.request
+            tableOfRentalsViewController.request = self.request
+            println("segue \(self.request)")
             
         }
+        
     }
     
     
     @IBAction func searchButtonPressed(sender: AnyObject) {
         
         request = Request(price: price)
-        println(request)
-        request!.saveInBackground()
+        println("searchbuton \(request)")
+        request!.save()
         //then peform segue to table of rentals
-        self.performSegueWithIdentifier("showTableOfRentals", sender: self)
+        self.performSegueWithIdentifier("showRentals", sender: self)
     }
     
     @IBAction func priceSliderChanged(sender: UISlider) {
         price = lroundf(sender.value)
         priceLabel.text = "$\(price)+"
     }
-
+    
 }
