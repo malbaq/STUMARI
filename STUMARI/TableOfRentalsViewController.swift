@@ -69,6 +69,10 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
         
         query!.whereKey("price", lessThanOrEqualTo: request.price)
         
+        query!.whereKey("bed", greaterThanOrEqualTo: request.bed)
+        
+        query!.whereKey("room", greaterThanOrEqualTo: request.room)
+        
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 if let objects = objects as? [Rental] {

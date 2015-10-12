@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Rentals-->
+        <!--RENTALS-->
         <scene sceneID="K2c-a7-DW3">
             <objects>
                 <viewController id="Yx3-yG-WnU" customClass="TableOfRentalsViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,34 +17,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="147" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QRy-kh-OPA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="156" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QRy-kh-OPA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="147" id="S1o-Sn-oXi" customClass="TableOfRentalsTableViewCell" customModule="STUMARI" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="156" id="S1o-Sn-oXi" customClass="TableOfRentalsTableViewCell" customModule="STUMARI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S1o-Sn-oXi" id="FSh-o2-qv9">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-8V-nRh">
-                                                    <rect key="frame" x="62" y="35" width="60" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <color key="textColor" red="0.27843138575553894" green="0.0" blue="0.83921575546264648" alpha="1" colorSpace="deviceRGB"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-dy-1UL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="155"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price is ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o78-Rl-FxA">
+                                                    <rect key="frame" x="241" y="61" width="119" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="119" id="6bS-wv-sch"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="example.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-dy-1UL">
-                                                    <rect key="frame" x="130" y="0.0" width="300" height="146"/>
-                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rooms ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFC-yS-e8u">
+                                                    <rect key="frame" x="1" y="17" width="85" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beds..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-DT-MX7">
+                                                    <rect key="frame" x="1" y="113" width="85" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="v5J-jE-ONc"/>
+                                                        <constraint firstAttribute="width" constant="85" id="xmD-Pd-ebU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="PMe-8V-nRh" firstAttribute="centerY" secondItem="FSh-o2-qv9" secondAttribute="centerY" id="CGu-oD-V2l"/>
-                                                <constraint firstItem="PMe-8V-nRh" firstAttribute="leading" secondItem="FSh-o2-qv9" secondAttribute="leading" constant="62" id="fcJ-Hb-Eax"/>
+                                                <constraint firstItem="gwn-DT-MX7" firstAttribute="leading" secondItem="BFC-yS-e8u" secondAttribute="leading" id="0wJ-wO-1Ib"/>
+                                                <constraint firstItem="gwn-DT-MX7" firstAttribute="top" secondItem="BFC-yS-e8u" secondAttribute="bottom" constant="70" id="2jt-jh-08c"/>
+                                                <constraint firstItem="gwn-DT-MX7" firstAttribute="leading" secondItem="FSh-o2-qv9" secondAttribute="leadingMargin" constant="-7" id="4JC-eN-B2d"/>
+                                                <constraint firstItem="gwn-DT-MX7" firstAttribute="bottom" secondItem="FSh-o2-qv9" secondAttribute="bottomMargin" id="HRU-K2-mwg"/>
+                                                <constraint firstAttribute="bottom" secondItem="RaV-dy-1UL" secondAttribute="bottom" id="KRC-Cf-skx"/>
+                                                <constraint firstItem="RaV-dy-1UL" firstAttribute="leading" secondItem="FSh-o2-qv9" secondAttribute="leading" id="MGj-3q-za4"/>
+                                                <constraint firstItem="RaV-dy-1UL" firstAttribute="top" secondItem="FSh-o2-qv9" secondAttribute="top" id="SQ5-a0-jAK"/>
+                                                <constraint firstAttribute="trailing" secondItem="RaV-dy-1UL" secondAttribute="trailing" id="SXE-BI-OpX"/>
+                                                <constraint firstItem="o78-Rl-FxA" firstAttribute="centerX" secondItem="RaV-dy-1UL" secondAttribute="centerX" id="Sah-Yb-aQv"/>
+                                                <constraint firstItem="o78-Rl-FxA" firstAttribute="top" secondItem="FSh-o2-qv9" secondAttribute="topMargin" constant="53" id="f98-Hb-3nC"/>
+                                                <constraint firstItem="gwn-DT-MX7" firstAttribute="trailing" secondItem="BFC-yS-e8u" secondAttribute="trailing" id="kOV-4q-TrL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="o78-Rl-FxA" secondAttribute="bottom" constant="52" id="llc-9d-oMF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="priceLabel" destination="PMe-8V-nRh" id="zai-mP-tWv"/>
+                                            <outlet property="bedLabel" destination="gwn-DT-MX7" id="PgC-dk-zrO"/>
+                                            <outlet property="priceLabel" destination="o78-Rl-FxA" id="wxC-b3-Q5j"/>
+                                            <outlet property="roomLabel" destination="BFC-yS-e8u" id="OmW-V7-3rs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -62,7 +93,7 @@
                             <constraint firstItem="QRy-kh-OPA" firstAttribute="bottom" secondItem="gON-Sp-OzX" secondAttribute="top" id="RDY-zR-9r7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Rentals" id="g6d-Hc-Ost"/>
+                    <navigationItem key="navigationItem" title="RENTALS" id="g6d-Hc-Ost"/>
                     <connections>
                         <outlet property="tableView" destination="QRy-kh-OPA" id="7YI-Wa-AvY"/>
                     </connections>
@@ -71,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="2034" y="117"/>
         </scene>
-        <!--DEFINE YOUR SEARCH-->
+        <!--SEARCH-->
         <scene sceneID="J0A-yf-N37">
             <objects>
                 <tableViewController id="aNO-Nz-Ksh" customClass="RequestTableViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +118,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D6K-xT-tMs" id="rBQ-5C-DBV">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-e3-ItI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;=$50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-e3-ItI">
                                                     <rect key="frame" x="48" y="10" width="154" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="154" id="Vk3-1Q-ZUm"/>
@@ -122,33 +153,75 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Beds" footerTitle="Please define bla bla" id="KOI-wb-HCr">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nOy-p5-MGn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="nOy-p5-MGn">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nOy-p5-MGn" id="4HT-GQ-adz">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="acO-uN-NQi">
-                                                    <rect key="frame" x="43" y="8" width="245" height="29"/>
-                                                    <segments>
-                                                        <segment title="Any"/>
-                                                        <segment title="10+"/>
-                                                        <segment title="20+"/>
-                                                        <segment title="30+"/>
-                                                        <segment title="50+"/>
-                                                        <segment title="100+"/>
-                                                    </segments>
-                                                </segmentedControl>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="ivh-9V-eyG">
+                                                    <rect key="frame" x="6" y="54" width="250" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="246" id="16n-WE-s13"/>
+                                                        <constraint firstAttribute="height" constant="30" id="nAm-Pi-1mP"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="numberOfBedsSliderChanged:" destination="aNO-Nz-Ksh" eventType="valueChanged" id="e7b-qA-K8z"/>
+                                                    </connections>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2+ beds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36b-dh-eSl">
+                                                    <rect key="frame" x="34" y="8" width="150" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="3Fy-sl-L8J"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ivh-9V-eyG" firstAttribute="leading" secondItem="4HT-GQ-adz" secondAttribute="leadingMargin" id="JqS-Dt-L5q"/>
+                                                <constraint firstItem="36b-dh-eSl" firstAttribute="leading" secondItem="4HT-GQ-adz" secondAttribute="leadingMargin" constant="26" id="P1j-uA-tgE"/>
+                                                <constraint firstItem="ivh-9V-eyG" firstAttribute="top" secondItem="36b-dh-eSl" secondAttribute="bottom" constant="8" symbolic="YES" id="PHg-ym-QFe"/>
+                                                <constraint firstItem="36b-dh-eSl" firstAttribute="top" secondItem="4HT-GQ-adz" secondAttribute="topMargin" id="X20-3J-MW8"/>
+                                                <constraint firstItem="ivh-9V-eyG" firstAttribute="bottom" secondItem="4HT-GQ-adz" secondAttribute="bottomMargin" id="bJq-Mv-xUk"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Rooms" footerTitle="Please define bla bla" id="oGq-7b-CdY">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fIV-xc-oYc">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="fIV-xc-oYc">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fIV-xc-oYc" id="VyG-we-B5S">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1+ rooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPm-pK-rY4">
+                                                    <rect key="frame" x="24" y="22" width="150" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="O7H-6K-8cT"/>
+                                                        <constraint firstAttribute="width" constant="150" id="rOb-PU-rya"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="str-iY-dI0">
+                                                    <rect key="frame" x="6" y="60" width="250" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="246" id="Px8-FJ-2Aj"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="numberOfRoomsSliderChanged:" destination="aNO-Nz-Ksh" eventType="valueChanged" id="3RS-AR-xUl"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="str-iY-dI0" firstAttribute="top" secondItem="JPm-pK-rY4" secondAttribute="bottom" constant="8" symbolic="YES" id="6NQ-IC-Wfa"/>
+                                                <constraint firstItem="JPm-pK-rY4" firstAttribute="leading" secondItem="VyG-we-B5S" secondAttribute="leadingMargin" constant="16" id="Bo5-Bu-hrX"/>
+                                                <constraint firstItem="str-iY-dI0" firstAttribute="leading" secondItem="VyG-we-B5S" secondAttribute="leadingMargin" id="eph-cs-M31"/>
+                                                <constraint firstItem="JPm-pK-rY4" firstAttribute="top" secondItem="VyG-we-B5S" secondAttribute="topMargin" constant="14" id="iDO-Mv-HZZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -159,7 +232,7 @@
                             <outlet property="delegate" destination="aNO-Nz-Ksh" id="d6C-VC-OIL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="DEFINE YOUR SEARCH" id="mGe-a2-4ea">
+                    <navigationItem key="navigationItem" title="SEARCH" id="mGe-a2-4ea">
                         <barButtonItem key="rightBarButtonItem" title="Search" id="Xdu-5I-KIh">
                             <connections>
                                 <action selector="searchButtonPressed:" destination="aNO-Nz-Ksh" id="3Lv-lf-mgI"/>
@@ -167,6 +240,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="numberOfBedsLabel" destination="36b-dh-eSl" id="CRM-wY-XbH"/>
+                        <outlet property="numberOfRoomsLabel" destination="JPm-pK-rY4" id="1t2-x5-cf2"/>
                         <outlet property="priceLabel" destination="TXu-e3-ItI" id="aYh-uh-7AA"/>
                         <segue destination="IcU-pF-1vC" kind="presentation" identifier="showRentals" id="k82-W5-cgZ"/>
                     </connections>

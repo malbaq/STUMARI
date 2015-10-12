@@ -12,9 +12,17 @@ class RequestTableViewController: UITableViewController {
     // Set up initial price according initial value of the slider
     var price:Int = 50
     
+    var bed:Int = 2
+    
+    var room:Int = 1
+    
     var request: Request?
     
     @IBOutlet var priceLabel: UILabel!
+    
+    @IBOutlet var numberOfBedsLabel: UILabel!
+    
+    @IBOutlet var numberOfRoomsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,7 +125,7 @@ class RequestTableViewController: UITableViewController {
     
     @IBAction func searchButtonPressed(sender: AnyObject) {
         
-        request = Request(price: price)
+        request = Request(price: price, bed: bed, room: room)
         println("searchbuton \(request)")
         request!.save()
         //then peform segue to table of rentals
@@ -126,7 +134,17 @@ class RequestTableViewController: UITableViewController {
     
     @IBAction func priceSliderChanged(sender: UISlider) {
         price = lroundf(sender.value)
-        priceLabel.text = "$\(price)+"
+        priceLabel.text = "<= $\(price)"
+    }
+    
+    @IBAction func numberOfBedsSliderChanged(sender: UISlider) {
+        bed = lroundf(sender.value)
+        numberOfBedsLabel.text = "\(bed)+ beds"
+    }
+    
+    @IBAction func numberOfRoomsSliderChanged(sender: UISlider) {
+        room = lroundf(sender.value)
+        numberOfRoomsLabel.text = "\(room)+ rooms"
     }
     
 }

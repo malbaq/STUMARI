@@ -11,6 +11,8 @@ import UIKit
 class TableOfRentalsTableViewCell: UITableViewCell {
     
     @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var bedLabel: UILabel!
+    @IBOutlet var roomLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +28,8 @@ class TableOfRentalsTableViewCell: UITableViewCell {
     func setRental(rental: Rental){
         rental.fetchIfNeeded()
         self.priceLabel.text = String(rental.price)
+        self.bedLabel.text = String(rental.bed)
+        self.roomLabel.text = String(rental.room)
         //        self.transitRate.text = String(quote.transitRate)
         //        self.transitTime.text = String(quote.transitTime)
         //        self.logoImage.image = UIImage(named: "placeholder")
