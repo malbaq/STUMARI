@@ -77,8 +77,10 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
             if error == nil {
                 if let objects = objects as? [Rental] {
                     self.arrayOfRentals = objects
+                } else {
+                    // need to code what to show if nothing to match the request
                 }
-                println("the first quote is \(self.arrayOfRentals[0])")
+                println("the first rental is \(self.arrayOfRentals[0])")
             }
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class RequestTableViewController: UITableViewController {
     // Set up initial price according initial value of the slider
+    
     var price:Int = 50
     
     var bed:Int = 2
