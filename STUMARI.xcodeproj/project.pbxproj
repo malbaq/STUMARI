@@ -10,6 +10,7 @@
 		68A0522DC05096453C7BB7F1 /* libPods-STUMARI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08124CB0F79731FA2E526D00 /* libPods-STUMARI.a */; };
 		E2A096F81BCD4F2200E8F1F1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A096F71BCD4F2200E8F1F1 /* LogInViewController.swift */; };
 		E2A096FA1BCD4F8A00E8F1F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A096F91BCD4F8A00E8F1F1 /* SignUpViewController.swift */; };
+		E2A096FC1BCD66DB00E8F1F1 /* stumariLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E2A096FB1BCD66DB00E8F1F1 /* stumariLogo.png */; };
 		E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC70211BB9C44500234269 /* AppDelegate.swift */; };
 		E2BC70271BB9C44500234269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70251BB9C44500234269 /* Main.storyboard */; };
 		E2BC70291BB9C44500234269 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70281BB9C44500234269 /* Images.xcassets */; };
@@ -43,6 +44,7 @@
 		C31F782268070ED61BC81C14 /* Pods-STUMARI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUMARI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STUMARI/Pods-STUMARI.debug.xcconfig"; sourceTree = "<group>"; };
 		E2A096F71BCD4F2200E8F1F1 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E2A096F91BCD4F8A00E8F1F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E2A096FB1BCD66DB00E8F1F1 /* stumariLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stumariLogo.png; sourceTree = "<group>"; };
 		E2BC701C1BB9C44500234269 /* STUMARI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STUMARI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC70201BB9C44500234269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2BC70211BB9C44500234269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				E2E085981BCCEA3000B4AD59 /* exm1.jpg */,
 				E2E085961BCC4EEF00B4AD59 /* exm2.jpg */,
 				E2E085991BCCEA3000B4AD59 /* exm3.jpg */,
+				E2A096FB1BCD66DB00E8F1F1 /* stumariLogo.png */,
 				E2E0858A1BC26AFE00B4AD59 /* RentalModel.swift */,
 				E2E085881BBC58C200B4AD59 /* RequestModel.swift */,
 				E2E085941BCC406000B4AD59 /* Rental2Save.swift */,
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A096FC1BCD66DB00E8F1F1 /* stumariLogo.png in Resources */,
 				E2E0859B1BCCEA3000B4AD59 /* exm3.jpg in Resources */,
 				E2BC70271BB9C44500234269 /* Main.storyboard in Resources */,
 				E2E085971BCC4EEF00B4AD59 /* exm2.jpg in Resources */,

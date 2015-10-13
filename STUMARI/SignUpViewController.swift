@@ -17,7 +17,7 @@ class SignUpViewController: PFSignUpViewController {
         
         //        self.view.backgroundColor = UIColor.lightGrayColor()
         
-        let logoView = UIImageView(image: UIImage(named:"logo.png"))
+        let logoView = UIImageView(image: UIImage(named:"stumariLogo.png"))
         self.signUpView!.logo = logoView
         logoView.contentMode = UIViewContentMode.ScaleAspectFit
         

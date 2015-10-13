@@ -25,7 +25,7 @@ class LogInViewController: PFLogInViewController {
         
         //        self.view.backgroundColor = UIColor.lightGrayColor()
         
-        let logoView = UIImageView(image: UIImage(named:"logo.png"))
+        let logoView = UIImageView(image: UIImage(named:"stumariLogo.png"))
         self.logInView!.logo = logoView
         logoView.contentMode = UIViewContentMode.ScaleAspectFit
     }
