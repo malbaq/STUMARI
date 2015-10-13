@@ -51,15 +51,15 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let quote = arrayOfQuotes[indexPath.row]
-//        var detailTableViewController: DetailTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailTableViewController")as! DetailTableViewController
-//        
-//        detailTableViewController.quote = quote
-//        self.navigationController?.pushViewController(detailTableViewController, animated: true)
-//        //        self.presentViewController(detailViewController, animated: true, completion: nil)
-//        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let rental = arrayOfRentals[indexPath.row]
+        var detailsOfRentalTableViewController: DetailsOfRentalTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailsOfRentalTableViewController") as! DetailsOfRentalTableViewController
+        
+        detailsOfRentalTableViewController.rental = rental
+        self.navigationController?.pushViewController(detailsOfRentalTableViewController, animated: true)
+        //        self.presentViewController(detailViewController, animated: true, completion: nil)
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
     
     func setUpRentals() {
         

@@ -13,7 +13,8 @@ class TableOfRentalsTableViewCell: UITableViewCell {
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var bedLabel: UILabel!
     @IBOutlet var roomLabel: UILabel!
-
+    @IBOutlet var image4cell: PFImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,21 +31,16 @@ class TableOfRentalsTableViewCell: UITableViewCell {
         self.priceLabel.text = String(rental.price)
         self.bedLabel.text = String(rental.bed)
         self.roomLabel.text = String(rental.room)
-        //        self.transitRate.text = String(quote.transitRate)
-        //        self.transitTime.text = String(quote.transitTime)
-        //        self.logoImage.image = UIImage(named: "placeholder")
-        //        self.logoImage.layer.cornerRadius = CGRectGetWidth(self.logoImage.frame)/15.0
-        //        self.logoImage.layer.masksToBounds = true
+        self.image4cell.image = UIImage(named: "placeholder")
         
-        
-        //        let logoImageFile = quote.carrier["logoImage"] as! PFFile
-        //        logoImageFile.getDataInBackgroundWithBlock {
-        //            (imageData: NSData?, error: NSError?) -> Void in
-        //            if error == nil {
-        //                if let imageData = imageData {
-        //                    self.logoImage.image = UIImage(data:imageData)
-        //                }
-        //            }
-        //        }
+        let logoImageFile = rental.image[1]
+        logoImageFile.getDataInBackgroundWithBlock {
+            (imageData: NSData?, error: NSError?) -> Void in
+                if error == nil {
+                    if let imageData = imageData {
+                        self.image4cell.image = UIImage(data:imageData)
+                }
+            }
+        }
     }
 }

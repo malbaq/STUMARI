@@ -10,10 +10,10 @@ import UIKit
 
 class TestViewController: UIViewController {
     
-    var price = 2
+    var price = 300
     var bed = 2
     var room = 3
-    var jpegNamedArray: [String] = ["example.jpg", "exm2.jpg"]
+    var jpegNamedArray: [String] = ["exm2.jpg", "exm1.jpg", "exm3.jpg"]
     var pffileImgArray: [PFFile] = [PFFile]()
     
     func uiimageJpeg2pffile (jpegImageName: [String]) -> [PFFile] {
