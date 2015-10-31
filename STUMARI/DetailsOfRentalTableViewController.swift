@@ -153,7 +153,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
     @IBAction func imageButtonPressed(sender: AnyObject) {
         var rentalImagesViewController: RentalImagesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RentalImagesViewController") as! RentalImagesViewController
         
-//        RentalImagesViewController.rental = rental
+        rentalImagesViewController.arrayOfImages = rental.image
         self.navigationController?.pushViewController(rentalImagesViewController, animated: true)
         //        self.presentViewController(detailViewController, animated: true, completion: nil)
     }

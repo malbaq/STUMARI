@@ -9,16 +9,15 @@
 import UIKit
 
 class RentalImagesViewController: UIViewController, UIPageViewControllerDataSource {
-
-    var pageImages: NSArray!
-    var pageViewController: UIPageViewController!
     
+    var arrayOfImages: [PFFile]!
+
+    var pageViewController: UIPageViewController!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        pageImages = NSArray(objects: "exm1.jpg", "exm2.jpg", "exm3.jpg")
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageVC") as! UIPageViewController
         
@@ -27,7 +26,6 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
         var initialContenViewController = self.pageTutorialAtIndex(0) as RentalImagesContentViewController
         
         var viewControllers = NSArray(object: initialContenViewController)
-        
         
         self.pageViewController.setViewControllers(viewControllers as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
@@ -44,27 +42,20 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
         // Dispose of any resources that can be recreated.
     }
     
-    func pageTutorialAtIndex(index: Int) -> RentalImagesContentViewController
-    {
-        
+    func pageTutorialAtIndex(index: Int) -> RentalImagesContentViewController {
         var pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RentalImagesContentViewController") as! RentalImagesContentViewController
         
-        pageContentViewController.imageFileName = pageImages[index] as! String
+        pageContentViewController.imageFile = arrayOfImages[index]
         pageContentViewController.pageIndex = index
         
-        
         return pageContentViewController
-        
     }
     
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?
-    {
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         var viewController = viewController as! RentalImagesContentViewController
         var index = viewController.pageIndex as Int
         
-        if(index == 0 || index == NSNotFound)
-        {
+        if(index == 0 || index == NSNotFound) {
             return nil
         }
         
@@ -73,20 +64,17 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
         return self.pageTutorialAtIndex(index)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?
-    {
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         var viewController = viewController as! RentalImagesContentViewController
         var index = viewController.pageIndex as Int
         
-        if((index == NSNotFound))
-        {
+        if((index == NSNotFound)) {
             return nil
         }
         
         index++
         
-        if(index == pageImages.count)
-        {
+        if(index == arrayOfImages.count) {
             return nil
         }
         
@@ -94,7 +82,7 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return pageImages.count
+        return arrayOfImages.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

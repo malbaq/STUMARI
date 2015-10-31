@@ -12,16 +12,23 @@ class RentalImagesContentViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
 
-    var imageFileName: String!
+    var imageFile: PFFile!
     var pageIndex: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
-        imageView.image = UIImage(named: imageFileName)
-
+        
+        let logoImageFile = self.imageFile
+        logoImageFile.getDataInBackgroundWithBlock {
+            (imageData: NSData?, error: NSError?) -> Void in
+            if error == nil {
+                if let imageData = imageData {
+                        self.imageView.image = UIImage(data:imageData)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
