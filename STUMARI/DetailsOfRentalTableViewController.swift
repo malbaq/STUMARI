@@ -164,7 +164,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
             
         } else {
             self.callForLogin()
-            // self.paypalVCCalling()
+            // need to substitude by self.paypalVCCalling()
         }
     }
 }

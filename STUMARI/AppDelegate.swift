@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("RQGGrvNgwtcarntP1MYSq5NT90IY8S1vkDBZYdII", clientKey:"eXEAjyCnVmnRFIel3cvyXfeXbxeZfjzzQigHofwJ")
         
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGrayColor()
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.redColor()
+        
         return true
     }
 

@@ -28,9 +28,9 @@ class TableOfRentalsTableViewCell: UITableViewCell {
     
     func setRental(rental: Rental){
         rental.fetchIfNeeded()
-        self.priceLabel.text = String(rental.price)
-        self.bedLabel.text = String(rental.bed)
-        self.roomLabel.text = String(rental.room)
+        self.priceLabel.text = "$" + String(rental.price)
+        self.bedLabel.text = "Beds: " + String(rental.bed)
+        self.roomLabel.text = "Rooms: " + String(rental.room)
         self.image4cell.image = UIImage(named: "placeholder")
         
         let logoImageFile = rental.image[1]
