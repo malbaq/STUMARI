@@ -37,7 +37,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         
         rental.fetchIfNeeded()
         
-        let logoImageFile = rental.image[1]
+        let logoImageFile = rental.image[0]
         logoImageFile.getDataInBackgroundWithBlock {
             (imageData: NSData?, error: NSError?) -> Void in
             if error == nil {

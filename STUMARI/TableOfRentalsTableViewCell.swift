@@ -33,7 +33,7 @@ class TableOfRentalsTableViewCell: UITableViewCell {
         self.roomLabel.text = "Rooms: " + String(rental.room)
         self.image4cell.image = UIImage(named: "placeholder")
         
-        let logoImageFile = rental.image[1]
+        let logoImageFile = rental.image[0]
         logoImageFile.getDataInBackgroundWithBlock {
             (imageData: NSData?, error: NSError?) -> Void in
                 if error == nil {
