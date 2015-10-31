@@ -529,40 +529,22 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ej8-Gm-K13" id="qcz-L5-TmK">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exm1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LZa-wv-Wvh">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pu6-V0-3wA">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="90" id="28O-Qp-Xwx"/>
-                                                        <constraint firstAttribute="width" constant="90" id="Cqp-A2-0jI"/>
-                                                    </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="28O-Qp-Xwx"/>
-                                                            <exclude reference="Cqp-A2-0jI"/>
-                                                        </mask>
-                                                    </variation>
-                                                </imageView>
+                                                    <state key="normal" image="exm1.jpg">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="imageButtonPressed:" destination="NdZ-xH-hcB" eventType="touchUpInside" id="T6R-xh-4TV"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LZa-wv-Wvh" firstAttribute="leading" secondItem="qcz-L5-TmK" secondAttribute="leading" constant="15" id="BDY-6G-h1Y"/>
-                                                <constraint firstAttribute="bottom" secondItem="LZa-wv-Wvh" secondAttribute="bottom" constant="15" id="BHp-fI-3Rb"/>
-                                                <constraint firstItem="LZa-wv-Wvh" firstAttribute="top" secondItem="qcz-L5-TmK" secondAttribute="top" id="FxG-WI-F1B"/>
-                                                <constraint firstAttribute="bottom" secondItem="LZa-wv-Wvh" secondAttribute="bottom" constant="8" id="Th0-ZC-1VV"/>
-                                                <constraint firstItem="LZa-wv-Wvh" firstAttribute="top" secondItem="qcz-L5-TmK" secondAttribute="top" constant="8" id="XlT-a0-mBF"/>
-                                                <constraint firstItem="LZa-wv-Wvh" firstAttribute="leading" secondItem="qcz-L5-TmK" secondAttribute="leading" id="lyw-ff-JwI"/>
-                                                <constraint firstItem="LZa-wv-Wvh" firstAttribute="top" secondItem="qcz-L5-TmK" secondAttribute="top" constant="8" id="md9-ml-itm"/>
-                                                <constraint firstAttribute="trailing" secondItem="LZa-wv-Wvh" secondAttribute="trailing" id="ogm-sr-Nyl"/>
-                                                <constraint firstAttribute="bottom" secondItem="LZa-wv-Wvh" secondAttribute="bottom" id="rFw-cp-9gA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pu6-V0-3wA" secondAttribute="trailing" id="G7h-Wz-1id"/>
+                                                <constraint firstAttribute="bottom" secondItem="Pu6-V0-3wA" secondAttribute="bottom" id="J3y-6Q-x3c"/>
+                                                <constraint firstItem="Pu6-V0-3wA" firstAttribute="top" secondItem="qcz-L5-TmK" secondAttribute="top" id="K06-vY-IGj"/>
+                                                <constraint firstItem="Pu6-V0-3wA" firstAttribute="leading" secondItem="qcz-L5-TmK" secondAttribute="leading" id="pwK-MY-Q8N"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="BDY-6G-h1Y"/>
-                                                    <exclude reference="BHp-fI-3Rb"/>
-                                                    <exclude reference="Th0-ZC-1VV"/>
-                                                    <exclude reference="XlT-a0-mBF"/>
-                                                    <exclude reference="md9-ml-itm"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -862,7 +844,7 @@
                     </tableView>
                     <connections>
                         <outlet property="bedLabel" destination="yJ3-3k-YeG" id="QII-JU-pxY"/>
-                        <outlet property="imageOfRental" destination="LZa-wv-Wvh" id="BZl-vH-0MV"/>
+                        <outlet property="imageButton" destination="Pu6-V0-3wA" id="kqc-jp-LLO"/>
                         <outlet property="priceLabel" destination="A2Z-NQ-HU4" id="PrW-BM-wdr"/>
                         <outlet property="roomLabel" destination="izT-jR-TtV" id="4f3-Qg-1f6"/>
                     </connections>
@@ -874,7 +856,7 @@
         <!--Rental Images View Controller-->
         <scene sceneID="5Rf-QR-IkS">
             <objects>
-                <viewController id="Kvd-mc-NCd" customClass="RentalImagesViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RentalImagesViewController" id="Kvd-mc-NCd" customClass="RentalImagesViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FaG-OT-OEy"/>
                         <viewControllerLayoutGuide type="bottom" id="CJO-vZ-qR6"/>

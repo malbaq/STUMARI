@@ -10,10 +10,13 @@ import UIKit
 
 class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewControllerDelegate {
     
-    @IBOutlet var imageOfRental: PFImageView!
+    @IBOutlet var imageButton: UIButton!
+//    @IBOutlet var imageOfRental: PFImageView!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var bedLabel: UILabel!
     @IBOutlet var roomLabel: UILabel!
+    
+    var imageDefault = UIImage(named: "placeholder")
     
     var rental: Rental!
     
@@ -30,7 +33,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         self.priceLabel.text = String(rental.price)
         self.bedLabel.text = String(rental.bed)
         self.roomLabel.text = String(rental.room)
-        self.imageOfRental.image = UIImage(named: "placeholder")
+        self.imageButton.setImage(imageDefault, forState: .Normal)
         
         rental.fetchIfNeeded()
         
@@ -39,7 +42,8 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
             (imageData: NSData?, error: NSError?) -> Void in
             if error == nil {
                 if let imageData = imageData {
-                    self.imageOfRental.image = UIImage(data: imageData)
+                    let image = UIImage(data: imageData)
+                    self.imageButton.setImage(image, forState: .Normal)
                 }
             }
         }
@@ -146,6 +150,13 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func imageButtonPressed(sender: AnyObject) {
+        var rentalImagesViewController: RentalImagesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RentalImagesViewController") as! RentalImagesViewController
+        
+//        RentalImagesViewController.rental = rental
+        self.navigationController?.pushViewController(rentalImagesViewController, animated: true)
+        //        self.presentViewController(detailViewController, animated: true, completion: nil)
+    }
     @IBAction func OrderNowButtonPressed(sender: AnyObject) {
         if PFUser.currentUser() == nil {
             let alert = UIAlertController(title: "Need to be authorized", message: "To place an order you have to authorize first", preferredStyle: UIAlertControllerStyle.Alert)
