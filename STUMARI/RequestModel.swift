@@ -13,6 +13,9 @@ class Request : PFObject, PFSubclassing {
     @NSManaged var price: Int
     @NSManaged var bed: Int
     @NSManaged var room: Int
+    @NSManaged var radius: Int
+    @NSManaged var geoPoint: PFGeoPoint
+
     
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
@@ -29,10 +32,12 @@ class Request : PFObject, PFSubclassing {
         super.init()
     }
     
-    convenience init(price: Int, bed: Int, room: Int) {
+    convenience init(price: Int, bed: Int, room: Int, radius: Int, geoPoint: PFGeoPoint) {
         self.init()
         self.price = price
         self.bed = bed
         self.room = room
+        self.radius = radius
+        self.geoPoint = geoPoint
     }
 }

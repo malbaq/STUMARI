@@ -11,23 +11,39 @@ import UIKit
 class RequestTableViewController: UITableViewController {
     // Set up initial price according initial value of the slider
     
-    var price:Int = 50
-    
-    var bed:Int = 2
-    
-    var room:Int = 1
-    
-    var request: Request?
-    
     @IBOutlet var priceLabel: UILabel!
     
     @IBOutlet var numberOfBedsLabel: UILabel!
     
     @IBOutlet var numberOfRoomsLabel: UILabel!
     
+    @IBOutlet var radiusLabel: UILabel!
+    
+    @IBOutlet var lat: UILabel!
+    
+    @IBOutlet var lon: UILabel!
+
+    var latitude: CLLocationDegrees = 41.6940531
+    var longitude: CLLocationDegrees = 44.8006797
+    var geoPoint: PFGeoPoint!
+    
+    var radius: Int = 3
+    
+    var price: Int = 50
+    
+    var bed: Int = 2
+    
+    var room: Int = 1
+    
+    var request: Request?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.lat.text = String(stringInterpolationSegment: latitude)
+        self.lon.text = String(stringInterpolationSegment: longitude)
+        geoPoint = PFGeoPoint(latitude: latitude, longitude: longitude)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -126,7 +142,7 @@ class RequestTableViewController: UITableViewController {
     
     @IBAction func searchButtonPressed(sender: AnyObject) {
         
-        request = Request(price: price, bed: bed, room: room)
+        request = Request(price: price, bed: bed, room: room, radius: radius, geoPoint: geoPoint)
         println("searchbuton \(request)")
         request!.save()
         //then peform segue to table of rentals
@@ -135,7 +151,7 @@ class RequestTableViewController: UITableViewController {
     
     @IBAction func priceSliderChanged(sender: UISlider) {
         price = lroundf(sender.value)
-        priceLabel.text = "<= $\(price)"
+        priceLabel.text = "$\(price) max"
     }
     
     @IBAction func numberOfBedsSliderChanged(sender: UISlider) {
@@ -148,4 +164,8 @@ class RequestTableViewController: UITableViewController {
         numberOfRoomsLabel.text = "\(room)+ rooms"
     }
     
+    @IBAction func radiusSliderChanged(sender: UISlider) {
+        radius = lroundf(sender.value)
+        radiusLabel.text = "Radius: \(radius)km"
+    }
 }

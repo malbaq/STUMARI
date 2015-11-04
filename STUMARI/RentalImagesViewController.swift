@@ -29,7 +29,8 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
         
         self.pageViewController.setViewControllers(viewControllers as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
-        self.pageViewController.view.frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height-100)
+        // set the frame or add autolayout constraints http://stackoverflow.com/questions/26605392/does-uipageviewcontroller-has-to-be-full-screen
+        // self.pageViewController.view.frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height-100)
         
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)

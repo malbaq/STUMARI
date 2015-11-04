@@ -17,6 +17,7 @@
 		E29FA1A81BE4AD160033FC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29FA1A71BE4AD160033FC7E /* ViewController.swift */; };
 		E2A096F81BCD4F2200E8F1F1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A096F71BCD4F2200E8F1F1 /* LogInViewController.swift */; };
 		E2A096FA1BCD4F8A00E8F1F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A096F91BCD4F8A00E8F1F1 /* SignUpViewController.swift */; };
+		E2AFEA811BE8A3CF005E2E56 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFEA801BE8A3CF005E2E56 /* MapViewController.swift */; };
 		E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC70211BB9C44500234269 /* AppDelegate.swift */; };
 		E2BC70271BB9C44500234269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70251BB9C44500234269 /* Main.storyboard */; };
 		E2BC70291BB9C44500234269 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70281BB9C44500234269 /* Images.xcassets */; };
@@ -33,6 +34,8 @@
 		E2E0859A1BCCEA3000B4AD59 /* exm1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2E085981BCCEA3000B4AD59 /* exm1.jpg */; };
 		E2E0859B1BCCEA3000B4AD59 /* exm3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2E085991BCCEA3000B4AD59 /* exm3.jpg */; };
 		E2E0859D1BCCFF8A00B4AD59 /* DetailsOfRentalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0859C1BCCFF8A00B4AD59 /* DetailsOfRentalTableViewController.swift */; };
+		E2E9C63F1BE66E2A005BDCB2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E9C63E1BE66E2A005BDCB2 /* MapKit.framework */; };
+		E2E9C6411BE68A3A005BDCB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E9C6401BE68A3A005BDCB2 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,7 @@
 		E29FA1A71BE4AD160033FC7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2A096F71BCD4F2200E8F1F1 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E2A096F91BCD4F8A00E8F1F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E2AFEA801BE8A3CF005E2E56 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E2BC701C1BB9C44500234269 /* STUMARI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STUMARI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC70201BB9C44500234269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2BC70211BB9C44500234269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		E2E085981BCCEA3000B4AD59 /* exm1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = exm1.jpg; sourceTree = "<group>"; };
 		E2E085991BCCEA3000B4AD59 /* exm3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = exm3.jpg; sourceTree = "<group>"; };
 		E2E0859C1BCCFF8A00B4AD59 /* DetailsOfRentalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsOfRentalTableViewController.swift; sourceTree = "<group>"; };
+		E2E9C63E1BE66E2A005BDCB2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E2E9C6401BE68A3A005BDCB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F842FC2E2BBCC09796627EE0 /* Pods-STUMARI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUMARI.release.xcconfig"; path = "Pods/Target Support Files/Pods-STUMARI/Pods-STUMARI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E9C6411BE68A3A005BDCB2 /* CoreLocation.framework in Frameworks */,
+				E2E9C63F1BE66E2A005BDCB2 /* MapKit.framework in Frameworks */,
 				578FEDCE5D772E7BC910D148 /* libPods-STUMARI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +120,8 @@
 		8CB0F487756FB1607BE30088 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2E9C6401BE68A3A005BDCB2 /* CoreLocation.framework */,
+				E2E9C63E1BE66E2A005BDCB2 /* MapKit.framework */,
 				5DA0E16E9DAABF7863B4219C /* libPods-STUMARI.a */,
 			);
 			name = Frameworks;
@@ -141,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E2BC70211BB9C44500234269 /* AppDelegate.swift */,
+				E2AFEA801BE8A3CF005E2E56 /* MapViewController.swift */,
 				E2E0857E1BBAD45200B4AD59 /* RequestTableViewController.swift */,
 				E2E0858E1BCAD08600B4AD59 /* TableOfRentalsViewController.swift */,
 				E2E085901BCAD25700B4AD59 /* TableOfRentalsTableViewCell.swift */,
@@ -351,6 +362,7 @@
 				E29FA1A51BE4AD070033FC7E /* TheNextViewController.swift in Sources */,
 				E29FA1A81BE4AD160033FC7E /* ViewController.swift in Sources */,
 				E29FA1A61BE4AD070033FC7E /* TutorialPageContentHolderViewController.swift in Sources */,
+				E2AFEA811BE8A3CF005E2E56 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
