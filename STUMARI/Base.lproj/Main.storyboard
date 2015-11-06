@@ -747,13 +747,13 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cpf-FW-Kre" id="j9K-1L-Vbb">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="170" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-Mq-v41">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcomen Deutchland!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-Mq-v41">
                                                     <rect key="frame" x="148" y="0.0" width="444" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parametr 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnK-m7-td8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brief:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnK-m7-td8">
                                                     <rect key="frame" x="15" y="0.0" width="125" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="86" id="LPG-QP-qU8"/>
@@ -780,19 +780,19 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UoV-l1-jAZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="UoV-l1-jAZ">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UoV-l1-jAZ" id="H3q-zN-2Wp">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FQ-80-WlD">
-                                                    <rect key="frame" x="148" y="0.0" width="444" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Welcomen Deutchland!!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FQ-80-WlD">
+                                                    <rect key="frame" x="148" y="0.0" width="444" height="74"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parametr 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6X-3Q-gbV">
-                                                    <rect key="frame" x="15" y="0.0" width="125" height="43"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FullDescrptn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6X-3Q-gbV">
+                                                    <rect key="frame" x="15" y="0.0" width="125" height="74"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="86" id="Pon-ID-p7M"/>
                                                         <constraint firstAttribute="width" constant="125" id="WPA-zR-Ao2"/>
@@ -1008,6 +1008,8 @@
                     </tableView>
                     <connections>
                         <outlet property="bedLabel" destination="yJ3-3k-YeG" id="QII-JU-pxY"/>
+                        <outlet property="briefDescriptionLabel" destination="0gg-Mq-v41" id="yrb-Kw-piT"/>
+                        <outlet property="fullDescriptionLabel" destination="8FQ-80-WlD" id="GGb-6M-IAq"/>
                         <outlet property="imageButton" destination="Pu6-V0-3wA" id="kqc-jp-LLO"/>
                         <outlet property="mapViewToShowTheLocationOfTheRental" destination="fim-h6-6Kc" id="vn4-tm-VBg"/>
                         <outlet property="priceLabel" destination="A2Z-NQ-HU4" id="PrW-BM-wdr"/>
@@ -1209,6 +1211,6 @@
         <image name="exm1.jpg" width="896" height="597"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tLY-Lm-qb6"/>
+        <segue reference="nfp-Wh-lRD"/>
     </inferredMetricsTieBreakers>
 </document>

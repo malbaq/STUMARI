@@ -15,6 +15,8 @@ class Rental : PFObject, PFSubclassing {
     @NSManaged var room: Int
     @NSManaged var image: [PFFile]
     @NSManaged var geoPoint: PFGeoPoint
+    @NSManaged var briefDescription: String
+    @NSManaged var fullDescription: String
     
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
@@ -31,11 +33,13 @@ class Rental : PFObject, PFSubclassing {
         super.init()
     }
     
-    convenience init(price: Int, bed: Int, room: Int, geoPoint: PFGeoPoint) {
+    convenience init(price: Int, bed: Int, room: Int, geoPoint: PFGeoPoint, briefDescription: String, fullDescription: String) {
         self.init()
         self.price = price
         self.bed = bed
         self.room = room
         self.geoPoint = geoPoint
+        self.briefDescription = briefDescription
+        self.fullDescription = fullDescription
     }
 }

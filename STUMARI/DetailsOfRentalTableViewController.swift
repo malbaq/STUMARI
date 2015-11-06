@@ -17,6 +17,8 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var bedLabel: UILabel!
     @IBOutlet var roomLabel: UILabel!
+    @IBOutlet var briefDescriptionLabel: UILabel!
+    @IBOutlet var fullDescriptionLabel: UILabel!
     
     var imageDefault = UIImage(named: "placeholder")
     
@@ -46,6 +48,8 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         self.priceLabel.text = String(rental.price)
         self.bedLabel.text = String(rental.bed)
         self.roomLabel.text = String(rental.room)
+        self.briefDescriptionLabel.text = rental.briefDescription
+        self.fullDescriptionLabel.text = rental.fullDescription
         self.imageButton.setImage(imageDefault, forState: .Normal)
         
         rental.fetchIfNeeded()
