@@ -15,6 +15,7 @@ class TestViewController: UIViewController {
     var room = 3
     var jpegNamedArray: [String] = ["exm2.jpg", "exm1.jpg", "exm3.jpg"]
     var pffileImgArray: [PFFile] = [PFFile]()
+    var geoPoint = PFGeoPoint(latitude: 41.6940530, longitude: 44.8006790)
     
     func uiimageJpeg2pffile (jpegImageName: [String]) -> [PFFile] {
         for name in jpegImageName {
@@ -29,7 +30,7 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.uiimageJpeg2pffile(jpegNamedArray)
-        var rental = Rental2Save(price: price, bed: bed, room: room, image: pffileImgArray)
+        var rental = Rental2Save(price: price, bed: bed, room: room, image: pffileImgArray, geoPoint: geoPoint)
         rental.save()
 
         // Do any additional setup after loading the view.

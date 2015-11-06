@@ -73,6 +73,8 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
         
         query!.whereKey("room", greaterThanOrEqualTo: request.room)
         
+        query!.whereKey("geoPoint", nearGeoPoint: request.geoPoint, withinKilometers: request.radius)
+        
         query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
             if error == nil {
                 if let objects = objects as? [Rental] {
@@ -81,6 +83,7 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
                     // need to code what to show if nothing to match the request
                 }
                 println("the first rental is \(self.arrayOfRentals[0])")
+                println("Number of the rentals is \(self.arrayOfRentals.count)")
             }
         }
     }

@@ -13,7 +13,7 @@ class Request : PFObject, PFSubclassing {
     @NSManaged var price: Int
     @NSManaged var bed: Int
     @NSManaged var room: Int
-    @NSManaged var radius: Int
+    @NSManaged var radius: Double
     @NSManaged var geoPoint: PFGeoPoint
 
     
@@ -32,7 +32,7 @@ class Request : PFObject, PFSubclassing {
         super.init()
     }
     
-    convenience init(price: Int, bed: Int, room: Int, radius: Int, geoPoint: PFGeoPoint) {
+    convenience init(price: Int, bed: Int, room: Int, radius: Double, geoPoint: PFGeoPoint) {
         self.init()
         self.price = price
         self.bed = bed

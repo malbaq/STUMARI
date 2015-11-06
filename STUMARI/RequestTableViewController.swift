@@ -19,15 +19,11 @@ class RequestTableViewController: UITableViewController {
     
     @IBOutlet var radiusLabel: UILabel!
     
-    @IBOutlet var lat: UILabel!
-    
-    @IBOutlet var lon: UILabel!
-
     var latitude: CLLocationDegrees = 41.6940531
     var longitude: CLLocationDegrees = 44.8006797
     var geoPoint: PFGeoPoint!
     
-    var radius: Int = 3
+    var radius: Double = 3.0
     
     var price: Int = 50
     
@@ -40,8 +36,6 @@ class RequestTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.lat.text = String(stringInterpolationSegment: latitude)
-        self.lon.text = String(stringInterpolationSegment: longitude)
         geoPoint = PFGeoPoint(latitude: latitude, longitude: longitude)
         
         // Uncomment the following line to preserve selection between presentations
@@ -165,7 +159,7 @@ class RequestTableViewController: UITableViewController {
     }
     
     @IBAction func radiusSliderChanged(sender: UISlider) {
-        radius = lroundf(sender.value)
-        radiusLabel.text = "Radius: \(radius)km"
+        radius = Double(lroundf(sender.value))
+        radiusLabel.text = "Radius: \(Int(radius)) km"
     }
 }

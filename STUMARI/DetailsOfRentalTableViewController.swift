@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import MapKit
 
-class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewControllerDelegate {
+class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewControllerDelegate, MKMapViewDelegate {
     
+    @IBOutlet var mapViewToShowTheLocationOfTheRental: MKMapView!
     @IBOutlet var imageButton: UIButton!
 //    @IBOutlet var imageOfRental: PFImageView!
     @IBOutlet var priceLabel: UILabel!
@@ -28,6 +30,17 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
+        let latitude: CLLocationDegrees = self.rental.geoPoint.latitude
+        let longitude: CLLocationDegrees = rental.geoPoint.longitude
+        let latDelta: CLLocationDegrees = 0.001
+        let longDelta: CLLocationDegrees = 0.001
+        
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        mapViewToShowTheLocationOfTheRental.setRegion(region, animated: true)
         
         rental.fetchIfNeeded()
         self.priceLabel.text = String(rental.price)
