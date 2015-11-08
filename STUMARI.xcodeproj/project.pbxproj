@@ -18,6 +18,7 @@
 		E2A096F81BCD4F2200E8F1F1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A096F71BCD4F2200E8F1F1 /* LogInViewController.swift */; };
 		E2A096FA1BCD4F8A00E8F1F1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A096F91BCD4F8A00E8F1F1 /* SignUpViewController.swift */; };
 		E2AFEA811BE8A3CF005E2E56 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFEA801BE8A3CF005E2E56 /* MapViewController.swift */; };
+		E2AFEA831BEF8BC1005E2E56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AFEA821BEF8BC1005E2E56 /* ProfileViewController.swift */; };
 		E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC70211BB9C44500234269 /* AppDelegate.swift */; };
 		E2BC70271BB9C44500234269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70251BB9C44500234269 /* Main.storyboard */; };
 		E2BC70291BB9C44500234269 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BC70281BB9C44500234269 /* Images.xcassets */; };
@@ -61,6 +62,7 @@
 		E2A096F71BCD4F2200E8F1F1 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E2A096F91BCD4F8A00E8F1F1 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E2AFEA801BE8A3CF005E2E56 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E2AFEA821BEF8BC1005E2E56 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E2BC701C1BB9C44500234269 /* STUMARI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STUMARI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BC70201BB9C44500234269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2BC70211BB9C44500234269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				E2A096F91BCD4F8A00E8F1F1 /* SignUpViewController.swift */,
 				E29FA19F1BE40F070033FC7E /* RentalImagesViewController.swift */,
 				E29FA1A11BE413F60033FC7E /* RentalImagesContentViewController.swift */,
+				E2AFEA821BEF8BC1005E2E56 /* ProfileViewController.swift */,
 				E2BC70251BB9C44500234269 /* Main.storyboard */,
 				E2BC70281BB9C44500234269 /* Images.xcassets */,
 				E2BC702A1BB9C44500234269 /* LaunchScreen.xib */,
@@ -352,6 +355,7 @@
 				E2E0859D1BCCFF8A00B4AD59 /* DetailsOfRentalTableViewController.swift in Sources */,
 				E2E0858F1BCAD08600B4AD59 /* TableOfRentalsViewController.swift in Sources */,
 				E2E0857F1BBAD45200B4AD59 /* RequestTableViewController.swift in Sources */,
+				E2AFEA831BEF8BC1005E2E56 /* ProfileViewController.swift in Sources */,
 				E29FA1A21BE413F60033FC7E /* RentalImagesContentViewController.swift in Sources */,
 				E2E085951BCC406000B4AD59 /* Rental2Save.swift in Sources */,
 				E2BC70221BB9C44500234269 /* AppDelegate.swift in Sources */,

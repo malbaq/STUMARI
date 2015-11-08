@@ -154,7 +154,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
             | PFLogInFields.SignUpButton
             | PFLogInFields.PasswordForgotten
             | PFLogInFields.DismissButton
-            | PFLogInFields.Facebook)
+            /*| PFLogInFields.Facebook*/)
         
         self.presentViewController(logInController, animated:true, completion: nil)
     }

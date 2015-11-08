@@ -14,6 +14,7 @@ class TableOfRentalsTableViewCell: UITableViewCell {
     @IBOutlet var bedLabel: UILabel!
     @IBOutlet var roomLabel: UILabel!
     @IBOutlet var image4cell: PFImageView!
+    @IBOutlet var briefDescriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,7 @@ class TableOfRentalsTableViewCell: UITableViewCell {
         self.priceLabel.text = "$" + String(rental.price)
         self.bedLabel.text = "Beds: " + String(rental.bed)
         self.roomLabel.text = "Rooms: " + String(rental.room)
+        self.briefDescriptionLabel.text = rental.briefDescription
         self.image4cell.image = UIImage(named: "placeholder")
         
         let logoImageFile = rental.image[0]
