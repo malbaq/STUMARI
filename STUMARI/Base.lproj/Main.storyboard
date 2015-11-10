@@ -602,7 +602,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="malb" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jol-qe-QrS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="fucking bad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jol-qe-QrS">
                                 <rect key="frame" x="119" y="72" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -662,6 +662,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWz-Pq-HdX">
+                                <rect key="frame" x="16" y="266" width="272" height="38"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonPressed:" destination="1O3-ye-3sv" eventType="touchUpInside" id="3L3-3A-jNd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -686,7 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsY-NN-7sz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3560" y="-657"/>
+            <point key="canvasLocation" x="2802" y="-657"/>
         </scene>
         <!--Details Of Rental Table View Controller-->
         <scene sceneID="GJd-rg-m6c">
@@ -1314,13 +1323,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYx-lc-ci4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2802" y="-657"/>
+            <point key="canvasLocation" x="2034" y="-657"/>
         </scene>
     </scenes>
     <resources>
         <image name="exm1.jpg" width="896" height="597"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tLY-Lm-qb6"/>
+        <segue reference="nfp-Wh-lRD"/>
     </inferredMetricsTieBreakers>
 </document>

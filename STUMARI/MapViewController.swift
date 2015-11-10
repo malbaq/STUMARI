@@ -43,6 +43,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
         uilpgr.minimumPressDuration = 1.0
         mapView.addGestureRecognizer(uilpgr)
+        println("mapVC viewDidLoaded")
     }
 
     override func didReceiveMemoryWarning() {

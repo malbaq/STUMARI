@@ -22,16 +22,26 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        if let user = PFUser.currentUser() {
+            userUsernameLabel.text = user.username
+            userEmailLabel.text = user.email
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+/*
+    func getCurrentOrder(user: PFUser) -> Order? {
+        let query = PFQuery(className: "Order")
+        query.whereKey("guest", equalTo: user)
+        
+        return
+    }
+*/
     /*
     // MARK: - Navigation
 
@@ -43,6 +53,11 @@ class ProfileViewController: UIViewController {
     */
     
     @IBAction func dismissButtonPressed(sender: AnyObject) {
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func logOutButtonPressed(sender: AnyObject) {
+        PFUser.logOut()
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

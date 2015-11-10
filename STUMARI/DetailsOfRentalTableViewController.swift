@@ -156,7 +156,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
             | PFLogInFields.DismissButton
             /*| PFLogInFields.Facebook*/)
         
-        self.presentViewController(logInController, animated:true, completion: nil)
+        self.presentViewController(logInController, animated: true, completion: nil)
     }
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
