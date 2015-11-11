@@ -1052,6 +1052,16 @@
                                                     <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uk2-oU-NK2">
+                                                    <rect key="frame" x="148" y="7" width="46" height="30"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="testingOrderCreation:" destination="NdZ-xH-hcB" eventType="touchUpInside" id="5Ud-Wm-j4E"/>
+                                                        <segue destination="EkK-1w-a9C" kind="presentation" identifier="makeOrder" id="n4P-Xw-Cuv"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="SeC-fQ-1sv" firstAttribute="top" secondItem="Lzi-f1-Zgp" secondAttribute="top" id="93f-Rk-gDT"/>

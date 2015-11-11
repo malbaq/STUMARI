@@ -147,14 +147,14 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         
         logInController.delegate = self
         
-        logInController.facebookPermissions = ["email", "public_profile"]
+        /* logInController.facebookPermissions = ["email", "public_profile"] */
         
         logInController.fields = (PFLogInFields.UsernameAndPassword
             | PFLogInFields.LogInButton
             | PFLogInFields.SignUpButton
             | PFLogInFields.PasswordForgotten
             | PFLogInFields.DismissButton
-            /*| PFLogInFields.Facebook*/)
+            /* | PFLogInFields.Facebook */)
         
         self.presentViewController(logInController, animated: true, completion: nil)
     }
@@ -194,5 +194,30 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
             self.callForLogin()
             // need to substitude by self.paypalVCCalling()
         }
+    }
+
+    
+    ///////////////////////////////////
+    
+    var order: Order?
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "makeOrder") {
+            
+            let nav = segue.destinationViewController as! UINavigationController
+            let profileVC: ProfileViewController = nav.topViewController as! ProfileViewController
+            // look how to set up the request property and init all the table
+            profileVC.order = self.order
+            println("segue makeOrder")
+        }
+    }
+    @IBAction func testingOrderCreation (sender: AnyObject) {
+        
+        var firstDate = NSDate()
+        var lastDate = NSDate()
+        var guest = PFUser.currentUser()
+        order = Order(rental: self.rental, firstDate: firstDate, lastDate: lastDate, guest: guest!, payment: 3.0)
+        order!.save()
+        self.performSegueWithIdentifier("makeOrder", sender: self)
     }
 }

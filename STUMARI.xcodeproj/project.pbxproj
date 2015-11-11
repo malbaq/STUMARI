@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		578FEDCE5D772E7BC910D148 /* libPods-STUMARI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA0E16E9DAABF7863B4219C /* libPods-STUMARI.a */; };
+		E255981B1BF2875D0006A19E /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255981A1BF2875D0006A19E /* OrderModel.swift */; };
 		E26C05DE1BDE859700097E8F /* startScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E26C05DD1BDE859700097E8F /* startScreen.jpg */; };
 		E26C05E01BDE85B600097E8F /* stumariLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E26C05DF1BDE85B600097E8F /* stumariLogo.png */; };
 		E29FA1A01BE40F070033FC7E /* RentalImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29FA19F1BE40F070033FC7E /* RentalImagesViewController.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		5DA0E16E9DAABF7863B4219C /* libPods-STUMARI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STUMARI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31F782268070ED61BC81C14 /* Pods-STUMARI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUMARI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STUMARI/Pods-STUMARI.debug.xcconfig"; sourceTree = "<group>"; };
+		E255981A1BF2875D0006A19E /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		E26C05DD1BDE859700097E8F /* startScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startScreen.jpg; sourceTree = "<group>"; };
 		E26C05DF1BDE85B600097E8F /* stumariLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stumariLogo.png; sourceTree = "<group>"; };
 		E29FA19F1BE40F070033FC7E /* RentalImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalImagesViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				E26C05DD1BDE859700097E8F /* startScreen.jpg */,
 				E26C05DF1BDE85B600097E8F /* stumariLogo.png */,
 				E2E0858A1BC26AFE00B4AD59 /* RentalModel.swift */,
+				E255981A1BF2875D0006A19E /* OrderModel.swift */,
 				E2E085881BBC58C200B4AD59 /* RequestModel.swift */,
 				E2E085941BCC406000B4AD59 /* Rental2Save.swift */,
 				E2E085921BCC3D0D00B4AD59 /* TestViewController.swift */,
@@ -366,6 +369,7 @@
 				E29FA1A51BE4AD070033FC7E /* TheNextViewController.swift in Sources */,
 				E29FA1A81BE4AD160033FC7E /* ViewController.swift in Sources */,
 				E29FA1A61BE4AD070033FC7E /* TutorialPageContentHolderViewController.swift in Sources */,
+				E255981B1BF2875D0006A19E /* OrderModel.swift in Sources */,
 				E2AFEA811BE8A3CF005E2E56 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
