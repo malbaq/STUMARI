@@ -84,10 +84,21 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
+    
+    @IBAction func filterButtonPressed(sender: AnyObject) {
+        let requestTableViewController: RequestTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RequestTableViewController") as! RequestTableViewController
+        
+        requestTableViewController.latitude = latitude
+        requestTableViewController.longitude = longitude
+        
+        self.navigationController?.pushViewController(requestTableViewController, animated: true)
+    }
+    
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -100,4 +111,5 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             println("The showRequestTVC segue has just been performed")
         }
     }
+    */
 }

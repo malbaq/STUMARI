@@ -22,7 +22,7 @@ class TestViewController: UIViewController {
             var img = UIImage(named: name)
             var data = UIImageJPEGRepresentation(img, 5.0)
             var returnImg = PFFile(data: data)
-            pffileImgArray.append(returnImg)
+            pffileImgArray.append(returnImg!)
         }
         return pffileImgArray
     }

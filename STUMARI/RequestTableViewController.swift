@@ -115,6 +115,7 @@ class RequestTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
@@ -132,7 +133,7 @@ class RequestTableViewController: UITableViewController {
         }
         
     }
-    
+    */
     
     @IBAction func searchButtonPressed(sender: AnyObject) {
         
@@ -140,7 +141,13 @@ class RequestTableViewController: UITableViewController {
         println("searchbuton \(request)")
         request!.save()
         //then peform segue to table of rentals
-        self.performSegueWithIdentifier("showRentals", sender: self)
+        // self.performSegueWithIdentifier("showRentals", sender: self)
+        
+        let tableOfRentalsViewController: TableOfRentalsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TableOfRentalsViewController") as! TableOfRentalsViewController
+        
+        tableOfRentalsViewController.request = request
+        
+        self.navigationController?.pushViewController(tableOfRentalsViewController, animated: true)
     }
     
     @IBAction func priceSliderChanged(sender: UISlider) {

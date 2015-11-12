@@ -9,7 +9,7 @@
         <!--RENTALS-->
         <scene sceneID="K2c-a7-DW3">
             <objects>
-                <viewController id="Yx3-yG-WnU" customClass="TableOfRentalsViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableOfRentalsViewController" id="Yx3-yG-WnU" customClass="TableOfRentalsViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cJc-31-ed1"/>
                         <viewControllerLayoutGuide type="bottom" id="gON-Sp-OzX"/>
@@ -119,13 +119,7 @@
                             <constraint firstItem="QRy-kh-OPA" firstAttribute="bottom" secondItem="gON-Sp-OzX" secondAttribute="top" id="RDY-zR-9r7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="RENTALS" id="g6d-Hc-Ost">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="kDZ-vC-26G">
-                            <connections>
-                                <segue destination="38V-q7-PB8" kind="presentation" id="nfp-Wh-lRD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="RENTALS" id="g6d-Hc-Ost"/>
                     <connections>
                         <outlet property="tableView" destination="QRy-kh-OPA" id="7YI-Wa-AvY"/>
                     </connections>
@@ -155,7 +149,7 @@
         <!--FILTERS-->
         <scene sceneID="J0A-yf-N37">
             <objects>
-                <tableViewController id="aNO-Nz-Ksh" customClass="RequestTableViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RequestTableViewController" id="aNO-Nz-Ksh" customClass="RequestTableViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="RTF-DH-R3i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,12 +323,11 @@
                         <outlet property="numberOfRoomsLabel" destination="JPm-pK-rY4" id="1t2-x5-cf2"/>
                         <outlet property="priceLabel" destination="TXu-e3-ItI" id="aYh-uh-7AA"/>
                         <outlet property="radiusLabel" destination="BUB-jF-xcj" id="2pS-IU-1L1"/>
-                        <segue destination="IcU-pF-1vC" kind="presentation" identifier="showRentals" id="k82-W5-cgZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cI-wX-VlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="885"/>
+            <point key="canvasLocation" x="1222" y="117"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="UXB-Hr-Lhz">
@@ -501,25 +494,7 @@
             </objects>
             <point key="canvasLocation" x="2802" y="885"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3rS-C8-nUI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="38V-q7-PB8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TqC-Zl-yYd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="aNO-Nz-Ksh" kind="relationship" relationship="rootViewController" id="wsg-Tu-mgo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yUB-jS-E1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1222" y="885"/>
-        </scene>
-        <!--Map View Controller-->
+        <!--MAP-->
         <scene sceneID="u9b-7M-a26">
             <objects>
                 <viewController id="puk-W4-WWH" customClass="MapViewController" customModule="STUMARI" customModuleProvider="target" sceneMemberID="viewController">
@@ -546,7 +521,7 @@
                             <constraint firstItem="TBA-9I-JDo" firstAttribute="bottom" secondItem="6ZD-Jv-Mmx" secondAttribute="top" id="tBg-Ek-xZV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E7B-cH-RrP">
+                    <navigationItem key="navigationItem" title="MAP" id="E7B-cH-RrP">
                         <barButtonItem key="leftBarButtonItem" title="Find Me" id="3Ag-KB-V3y">
                             <connections>
                                 <action selector="findMeTabbed:" destination="puk-W4-WWH" id="HG1-5E-tXW"/>
@@ -554,7 +529,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="OdY-mi-bUd">
                             <connections>
-                                <segue destination="38V-q7-PB8" kind="presentation" identifier="showRequestTVC" id="tLY-Lm-qb6"/>
+                                <action selector="filterButtonPressed:" destination="puk-W4-WWH" id="5Wj-fU-aiT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -564,25 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWe-iN-nfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="1659"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="0mt-i3-1ze">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IcU-pF-1vC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EmZ-yr-rYh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Yx3-yG-WnU" kind="relationship" relationship="rootViewController" id="aUo-gD-tQd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jhi-8A-j1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1222" y="117"/>
+            <point key="canvasLocation" x="422" y="117"/>
         </scene>
         <!--Profile-->
         <scene sceneID="jKM-my-ZdA">
@@ -1148,7 +1105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgK-zt-cAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3512" y="117"/>
+            <point key="canvasLocation" x="3600" y="117"/>
         </scene>
         <!--Rental Images Content View Controller-->
         <scene sceneID="stm-E9-eIa">
@@ -1180,7 +1137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s1-Nb-CKY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4909" y="117"/>
+            <point key="canvasLocation" x="5189" y="117"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="tpF-Em-hPI">
@@ -1188,7 +1145,7 @@
                 <pageViewController storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="mzs-WT-kig" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLX-B2-MOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4206" y="117"/>
+            <point key="canvasLocation" x="4398" y="117"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6cD-YM-5aT">
@@ -1315,7 +1272,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArT-nG-LyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="1659"/>
+            <point key="canvasLocation" x="-392" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ygT-Aj-Zx3">
@@ -1339,7 +1296,4 @@
     <resources>
         <image name="exm1.jpg" width="896" height="597"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="nfp-Wh-lRD"/>
-    </inferredMetricsTieBreakers>
 </document>
