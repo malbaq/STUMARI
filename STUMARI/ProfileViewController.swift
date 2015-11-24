@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var addressValueLabel: UILabel!
     
-    var order: Order!
+    var order: Order?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
             userUsernameLabel.text = user.username
             userEmailLabel.text = user.email
         }
-       // println(order.guest)
+       println(order?.guest)
     }
 
     override func didReceiveMemoryWarning() {
