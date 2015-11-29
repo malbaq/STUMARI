@@ -15,6 +15,8 @@ class TableOfRentalsTableViewCell: UITableViewCell {
     @IBOutlet var roomLabel: UILabel!
     @IBOutlet var image4cell: PFImageView!
     @IBOutlet var briefDescriptionLabel: UILabel!
+    @IBOutlet var maskForTop: UIImageView!
+    @IBOutlet var maskForBottom: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +36,15 @@ class TableOfRentalsTableViewCell: UITableViewCell {
         self.roomLabel.text = "Rooms: " + String(rental.room)
         self.briefDescriptionLabel.text = rental.briefDescription
         self.image4cell.image = UIImage(named: "placeholder")
+        //add masks for top and bottom
+        
+        let backgroundOfMaskForTop = CAGradientLayer().maskForCell(false)
+        backgroundOfMaskForTop.frame = self.maskForTop.bounds
+        self.maskForTop.layer.insertSublayer(backgroundOfMaskForTop, atIndex: 0)
+
+        let backgroundOfMaskForBottom = CAGradientLayer().maskForCell(true)
+        backgroundOfMaskForBottom.frame = self.maskForBottom.bounds
+        self.maskForBottom.layer.insertSublayer(backgroundOfMaskForBottom, atIndex: 0)
         
         let logoImageFile = rental.image[0]
         logoImageFile.getDataInBackgroundWithBlock {

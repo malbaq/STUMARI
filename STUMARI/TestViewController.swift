@@ -29,11 +29,18 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.uiimageJpeg2pffile(jpegNamedArray)
-        var rental = Rental2Save(price: price, bed: bed, room: room, image: pffileImgArray, geoPoint: geoPoint)
-        rental.save()
+//        self.uiimageJpeg2pffile(jpegNamedArray)
+//        var rental = Rental2Save(price: price, bed: bed, room: room, image: pffileImgArray, geoPoint: geoPoint)
+//        rental.save()
 
+        // testing gradient extension
+        
+        let background = CAGradientLayer().maskForCell(false)
+        background.frame = self.view.bounds
+        self.view.layer.insertSublayer(background, atIndex: 0)
+        
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

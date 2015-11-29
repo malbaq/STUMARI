@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		578FEDCE5D772E7BC910D148 /* libPods-STUMARI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA0E16E9DAABF7863B4219C /* libPods-STUMARI.a */; };
 		E255981B1BF2875D0006A19E /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E255981A1BF2875D0006A19E /* OrderModel.swift */; };
+		E2621DA51C08592600641BBB /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2621DA41C08592600641BBB /* GradientExtension.swift */; };
 		E26C05DE1BDE859700097E8F /* startScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E26C05DD1BDE859700097E8F /* startScreen.jpg */; };
 		E26C05E01BDE85B600097E8F /* stumariLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E26C05DF1BDE85B600097E8F /* stumariLogo.png */; };
 		E29FA1A01BE40F070033FC7E /* RentalImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29FA19F1BE40F070033FC7E /* RentalImagesViewController.swift */; };
@@ -54,6 +55,7 @@
 		5DA0E16E9DAABF7863B4219C /* libPods-STUMARI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STUMARI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31F782268070ED61BC81C14 /* Pods-STUMARI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUMARI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STUMARI/Pods-STUMARI.debug.xcconfig"; sourceTree = "<group>"; };
 		E255981A1BF2875D0006A19E /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		E2621DA41C08592600641BBB /* GradientExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientExtension.swift; sourceTree = "<group>"; };
 		E26C05DD1BDE859700097E8F /* startScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startScreen.jpg; sourceTree = "<group>"; };
 		E26C05DF1BDE85B600097E8F /* stumariLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stumariLogo.png; sourceTree = "<group>"; };
 		E29FA19F1BE40F070033FC7E /* RentalImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalImagesViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				E2BC702A1BB9C44500234269 /* LaunchScreen.xib */,
 				E2BC701F1BB9C44500234269 /* Supporting Files */,
 				E2BC70411BB9D50300234269 /* STUMARI-Bridging-Header.h */,
+				E2621DA41C08592600641BBB /* GradientExtension.swift */,
 				E2E085981BCCEA3000B4AD59 /* exm1.jpg */,
 				E2E085961BCC4EEF00B4AD59 /* exm2.jpg */,
 				E2E085991BCCEA3000B4AD59 /* exm3.jpg */,
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29FA1A01BE40F070033FC7E /* RentalImagesViewController.swift in Sources */,
+				E2621DA51C08592600641BBB /* GradientExtension.swift in Sources */,
 				E2A096FA1BCD4F8A00E8F1F1 /* SignUpViewController.swift in Sources */,
 				E2E085931BCC3D0D00B4AD59 /* TestViewController.swift in Sources */,
 				E2E0859D1BCCFF8A00B4AD59 /* DetailsOfRentalTableViewController.swift in Sources */,
