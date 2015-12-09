@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("RQGGrvNgwtcarntP1MYSq5NT90IY8S1vkDBZYdII", clientKey:"eXEAjyCnVmnRFIel3cvyXfeXbxeZfjzzQigHofwJ")
         
-        //Stripe.setDefaultPublishableKey("pk_test_DJTeX81htX3b8KJNhZhspZZ9")
+        Stripe.setDefaultPublishableKey("pk_test_DJTeX81htX3b8KJNhZhspZZ9")
         
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGrayColor()
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.redColor()
