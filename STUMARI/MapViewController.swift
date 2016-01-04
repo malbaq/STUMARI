@@ -79,6 +79,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print(error)
     }
+    //
 
     @IBAction func findMeTabbed(sender: AnyObject) {
         manager.requestWhenInUseAuthorization()
