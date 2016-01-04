@@ -84,7 +84,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
-    
+    //
     @IBAction func filterButtonPressed(sender: AnyObject) {
         let requestTableViewController: RequestTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RequestTableViewController") as! RequestTableViewController
         
