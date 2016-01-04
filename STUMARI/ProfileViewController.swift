@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
             userUsernameLabel.text = user.username
             userEmailLabel.text = user.email
         }
-       println(order?.guest)
+       print(order?.guest)
     }
 
     override func didReceiveMemoryWarning() {

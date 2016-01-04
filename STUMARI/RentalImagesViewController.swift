@@ -27,7 +27,7 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
         
         var viewControllers = NSArray(object: initialContenViewController)
         
-        self.pageViewController.setViewControllers(viewControllers as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        self.pageViewController.setViewControllers(viewControllers as! [UIViewController] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
         // set the frame or add autolayout constraints http://stackoverflow.com/questions/26605392/does-uipageviewcontroller-has-to-be-full-screen
         // self.pageViewController.view.frame = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height-100)
@@ -44,7 +44,7 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
     }
     
     func pageTutorialAtIndex(index: Int) -> RentalImagesContentViewController {
-        var pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RentalImagesContentViewController") as! RentalImagesContentViewController
+        let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RentalImagesContentViewController") as! RentalImagesContentViewController
         
         pageContentViewController.imageFile = arrayOfImages[index]
         pageContentViewController.pageIndex = index
@@ -53,7 +53,7 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var viewController = viewController as! RentalImagesContentViewController
+        let viewController = viewController as! RentalImagesContentViewController
         var index = viewController.pageIndex as Int
         
         if(index == 0 || index == NSNotFound) {
@@ -66,7 +66,7 @@ class RentalImagesViewController: UIViewController, UIPageViewControllerDataSour
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var viewController = viewController as! RentalImagesContentViewController
+        let viewController = viewController as! RentalImagesContentViewController
         var index = viewController.pageIndex as Int
         
         if((index == NSNotFound)) {

@@ -138,8 +138,15 @@ class RequestTableViewController: UITableViewController {
     @IBAction func searchButtonPressed(sender: AnyObject) {
         
         request = Request(price: price, bed: bed, room: room, radius: radius, geoPoint: geoPoint)
-        println("searchbuton \(request)")
-        request!.save()
+        print("searchbuton \(request)")
+        do {
+            try request!.save()
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+            abort()
+        }
+
+        
         //then peform segue to table of rentals
         // self.performSegueWithIdentifier("showRentals", sender: self)
         

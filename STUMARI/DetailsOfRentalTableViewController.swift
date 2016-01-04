@@ -43,8 +43,13 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         
         mapViewToShowTheLocationOfTheRental.setRegion(region, animated: true)
-        
-        rental.fetchIfNeeded()
+        // to Swift 2 from rental.fetchIfNeeded()
+        do {
+            try rental.fetchIfNeeded()
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+            abort()
+        }
         self.priceLabel.text = String(rental.price)
         self.bedLabel.text = String(rental.bed)
         self.roomLabel.text = String(rental.room)
@@ -52,7 +57,13 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         self.fullDescriptionLabel.text = rental.fullDescription
         self.imageButton.setImage(imageDefault, forState: .Normal)
         
-        rental.fetchIfNeeded()
+        // to Swift 2 from  rental.fetchIfNeeded()
+        do {
+            try  rental.fetchIfNeeded()
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+            //abort()
+        }
         
         let logoImageFile = rental.image[0]
         logoImageFile.getDataInBackgroundWithBlock {
@@ -149,11 +160,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
         
         /* logInController.facebookPermissions = ["email", "public_profile"] */
         
-        logInController.fields = (PFLogInFields.UsernameAndPassword
-            | PFLogInFields.LogInButton
-            | PFLogInFields.SignUpButton
-            | PFLogInFields.PasswordForgotten
-            | PFLogInFields.DismissButton
+        logInController.fields = ([PFLogInFields.UsernameAndPassword, PFLogInFields.LogInButton, PFLogInFields.SignUpButton, PFLogInFields.PasswordForgotten, PFLogInFields.DismissButton]
             /* | PFLogInFields.Facebook */)
         
         self.presentViewController(logInController, animated: true, completion: nil)
@@ -168,7 +175,7 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
     }
     
     @IBAction func imageButtonPressed(sender: AnyObject) {
-        var rentalImagesViewController: RentalImagesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RentalImagesViewController") as! RentalImagesViewController
+        let rentalImagesViewController: RentalImagesViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RentalImagesViewController") as! RentalImagesViewController
         
         rentalImagesViewController.arrayOfImages = rental.image
         self.navigationController?.pushViewController(rentalImagesViewController, animated: true)
@@ -208,16 +215,22 @@ class DetailsOfRentalTableViewController: UITableViewController, PFLogInViewCont
             let profileVC: ProfileViewController = nav.topViewController as! ProfileViewController
             // look how to set up the request property and init all the table
             profileVC.order = self.order
-            println("segue makeOrder")
+            print("segue makeOrder")
         }
     }
     @IBAction func testingOrderCreation (sender: AnyObject) {
         
-        var firstDate = NSDate()
-        var lastDate = NSDate()
-        var guest = PFUser.currentUser()
+        let firstDate = NSDate()
+        let lastDate = NSDate()
+        let guest = PFUser.currentUser()
         order = Order(rental: self.rental, firstDate: firstDate, lastDate: lastDate, guest: guest!, payment: 3.0)
-        order!.save()
+        // to Swift 2 order!.save()
+        do {
+            try order!.save()
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+            //abort()
+        }
         self.performSegueWithIdentifier("makeOrder", sender: self)
     }
 }

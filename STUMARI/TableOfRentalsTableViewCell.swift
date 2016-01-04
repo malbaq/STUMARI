@@ -30,7 +30,13 @@ class TableOfRentalsTableViewCell: UITableViewCell {
     }
     
     func setRental(rental: Rental){
-        rental.fetchIfNeeded()
+        // to Swift 2 from rental.fetchIfNeeded()
+        do {
+            try rental.fetchIfNeeded()
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+            abort()
+        }
         self.priceLabel.text = "$" + String(rental.price)
         self.bedLabel.text = "Beds: " + String(rental.bed)
         self.roomLabel.text = "Rooms: " + String(rental.room)

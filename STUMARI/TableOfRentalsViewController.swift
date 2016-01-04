@@ -22,7 +22,7 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("fuck viewDidLoad \(request)")
+        print("fuck viewDidLoad \(request)")
         self.setUpRentals()
     }
     
@@ -53,7 +53,7 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let rental = arrayOfRentals[indexPath.row]
-        var detailsOfRentalTableViewController: DetailsOfRentalTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailsOfRentalTableViewController") as! DetailsOfRentalTableViewController
+        let detailsOfRentalTableViewController: DetailsOfRentalTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailsOfRentalTableViewController") as! DetailsOfRentalTableViewController
         
         detailsOfRentalTableViewController.rental = rental
         self.navigationController?.pushViewController(detailsOfRentalTableViewController, animated: true)
@@ -63,9 +63,9 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
     
     func setUpRentals() {
         
-        var query = Rental.query()
+        let query = Rental.query()
         
-        println(query)
+        print(query)
         
         query!.whereKey("price", lessThanOrEqualTo: request.price)
         
@@ -75,15 +75,15 @@ class TableOfRentalsViewController: UIViewController, UITableViewDataSource, UIT
         
         query!.whereKey("geoPoint", nearGeoPoint: request.geoPoint, withinKilometers: request.radius)
         
-        query!.findObjectsInBackgroundWithBlock { (objects: [AnyObject]?, error: NSError?) -> Void in
+        query!.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 if let objects = objects as? [Rental] {
                     self.arrayOfRentals = objects
                 } else {
                     // need to code what to show if nothing to match the request
                 }
-                println("the first rental is \(self.arrayOfRentals[0])")
-                println("Number of the rentals is \(self.arrayOfRentals.count)")
+                print("the first rental is \(self.arrayOfRentals[0])")
+                print("Number of the rentals is \(self.arrayOfRentals.count)")
             }
         }
     }

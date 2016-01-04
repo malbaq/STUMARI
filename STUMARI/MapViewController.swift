@@ -29,9 +29,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        var region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         
         mapView.setRegion(region, animated: true)
         
@@ -40,10 +40,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         annotation.subtitle = "To change search area pls long tap or Find me"
         mapView.addAnnotation(annotation)
         
-        var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
+        let uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
         uilpgr.minimumPressDuration = 1.0
         mapView.addGestureRecognizer(uilpgr)
-        println("mapVC viewDidLoaded")
+        print("mapVC viewDidLoaded")
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,23 +52,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func action(gestureRecognizer: UIGestureRecognizer) {
-        var touchPoint = gestureRecognizer.locationInView(self.mapView)
-        var newLocation: CLLocationCoordinate2D = mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+        let touchPoint = gestureRecognizer.locationInView(self.mapView)
+        let newLocation: CLLocationCoordinate2D = mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
         annotation.coordinate = newLocation
         self.latitude = newLocation.latitude
         self.longitude = newLocation.longitude
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        println("location has been just updated")
-        var userLocation: CLLocation = locations[0] as! CLLocation
-        println(userLocation.coordinate.latitude)
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("location has been just updated")
+        let userLocation: CLLocation = locations[0] 
+        print(userLocation.coordinate.latitude)
         
         self.latitude = userLocation.coordinate.latitude
         self.longitude = userLocation.coordinate.longitude
-        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        var region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         
         mapView.setRegion(region, animated: true)
         manager.stopUpdatingLocation()
@@ -76,8 +76,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         annotation.coordinate = location
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println(error)
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
     }
 
     @IBAction func findMeTabbed(sender: AnyObject) {

@@ -19,9 +19,9 @@ class TestViewController: UIViewController {
     
     func uiimageJpeg2pffile (jpegImageName: [String]) -> [PFFile] {
         for name in jpegImageName {
-            var img = UIImage(named: name)
-            var data = UIImageJPEGRepresentation(img, 5.0)
-            var returnImg = PFFile(data: data)
+            let img = UIImage(named: name)
+            let data = UIImageJPEGRepresentation(img!, 5.0)
+            let returnImg = PFFile(data: data!)
             pffileImgArray.append(returnImg!)
         }
         return pffileImgArray
